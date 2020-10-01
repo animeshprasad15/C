@@ -6,24 +6,27 @@ int main()
     int i;
     printf("Enter a string :");
     gets(a);
-    for(i=0;a[i]='\0';i++)
+    for(i=0;a[i]!='\0';i++)
     {
+        if(i==0)
+        {
+            if(a[i]>='a' && a[i]<='z')
+            a[i]-=32;
+        }
         if(a[i]==' ')
         {
             if(a[i+1]>='a' && a[i+1]<='z')
             {
                 a[i+1]-=32;
             }
+            else if(a[i]>='A' && a[i]<='Z')
+            {
+                a[i]+=32;
+            }
         }
-        else if(a[i]>='A' && a[i]<='Z')
-        {
-            a[i]+=32;
-        }
-        else
-        {
-            a[i]=a[i];
-        }
-        
     }
-    printf("\n%s",a);
+    printf("\nYour String :%s",a);
 }
+// Enter a string :wefsjsdbk sadjhwur wehfff
+
+// Your String :Wefsjsdbk Sadjhwur Wehfff

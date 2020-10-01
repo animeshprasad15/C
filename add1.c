@@ -13,5 +13,5 @@ int main()
     printf("Enter number");
     scanf("%d",&e);
     int z=a+b+c+d+e;
-    printf("%d",z);
+    printf("Sum of all number is =%d",z);
 }
